@@ -37,6 +37,8 @@ opts_chunk$set(echo=FALSE, fig.path='figure/',fig.align='center',fig.show='hold'
 
 Intro text. References can be obtained like this \cite{merzei13}. Or, just putting the year in parentheses: ``\citeA{merzei13} did some research.''
 
+Here is another reference I added \cite{tregel80}.
+
 \section{Section header}
 
 Section text.
@@ -49,13 +51,22 @@ data(USArrests)
 m1 <- lm(Murder ~ UrbanPop, data=USArrests)
 @ 
 
-Just above this text, we have R code that fits a regression model. We can pull out some results from this model in the text. For example, the slope is \Sexpr{round(coef(m1)[2],2)}. We can also include code to create a graph; see Figure~\ref{fig:fig1}.
+Just above this text, we have R code that fits a regression model. We can pull out some results from this model in the text. For example, the slope is \Sexpr{round(coef(m1)[2],2)}. We can also include code to create a graph; see Figure~\ref{fig:fig1} and Figure~\ref{fig:fig2}.
 
 \begin{figure}
 \caption{Residual plot.}
 \label{fig:fig1}
 <<fig1,echo=FALSE,fig.show="asis",out.width="3in",out.height="3in",fig.align="center">>=
 with(m1, plot(fitted.values, residuals, xlab="Fitted", ylab="Residual",
+              pch=20))
+@
+\end{figure}
+
+\begin{figure}
+\caption{Scatter plot.}
+\label{fig:fig2}
+<<fig2,echo=FALSE,fig.show="asis",out.width="3in",out.height="3in",fig.align="center">>=
+with(m1, plot(USArrests$UrbanPop, USArrests$Murder, xlab="Urban Population", ylab="Murder",
               pch=20))
 @
 \end{figure}
@@ -84,6 +95,6 @@ freely available under the General Public License~2 from the
 Comprehensive \proglang{R} Archive Network at \url{http://CRAN.R-project.org/}..
 
 
-\bibliography{refs}
+\bibliography{refsBenEdit}
 
 \end{document}
