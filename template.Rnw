@@ -66,8 +66,7 @@ with(m1, plot(fitted.values, residuals, xlab="Fitted", ylab="Residual",
 \caption{Scatter plot.}
 \label{fig:fig2}
 <<fig2,echo=FALSE,fig.show="asis",out.width="3in",out.height="3in",fig.align="center">>=
-with(m1, plot(USArrests$UrbanPop, USArrests$Murder, xlab="Urban Population", ylab="Murder",
-              pch=20))
+plot(USArrests$UrbanPop, USArrests$Murder, xlab="Urban Population", ylab="Murder", pch=20)
 @
 \end{figure}
 
@@ -95,6 +94,6 @@ freely available under the General Public License~2 from the
 Comprehensive \proglang{R} Archive Network at \url{http://CRAN.R-project.org/}..
 
 
-\bibliography{refsBenEdit}
+\bibliography{refs}
 
 \end{document}
