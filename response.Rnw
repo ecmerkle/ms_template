@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+
+\usepackage{enumerate}
+
+\title{Response to Reviewer Comments}
+\author{}
+
+\newcommand{\argmax}{\operatorname{argmax}\displaylimits}
+
+\let\proglang=\textsf
+\let\pkg=\emph
+\let\code=\texttt
+
+%% for internal use
+\newcommand{\readme}[1]{\emph{\marginpar{Ed} (#1)}}
+\newcommand{\bennotes}[1]{\emph{\marginpar{Ben} (#1)}}
+
+%\spacing{1}
+
+\begin{document}
+%\SweaveOpts{concordance=TRUE}
+\maketitle
+<<preliminaries, echo=FALSE, message=FALSE, warning=FALSE>>=
+library("knitr")
+## global knitr options
+opts_chunk$set(echo=FALSE, fig.align='center', fig.show='hold', size='footnotesize', cache.path="cache/", warning=FALSE, message = FALSE)
+@
+
+\noindent We thank the editor and reviewers for again helping to improve the paper. Our responses to the comments are below.
+
+\subsection*{Editor Comments}
+
+\begin{enumerate}[E.1.]
+
+\item{\em blah}
+
+  {\bf Response}:
+  
+\end{enumerate}
+
+\subsection*{Reviewer 1 Comments}
+
+
+\begin{enumerate}[{R1}.1.]
+
+  \item{\em blah}
+  
+  {\bf Response}:   
+\end{enumerate}
+
+\subsection*{Reviewer 2 Comments}
+
+
+\begin{enumerate}[R2.1.]
+
+  \item{\em blah}
+  
+    {\bf Response}:   
+\end{enumerate}
+
+\end{document}
