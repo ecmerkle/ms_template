@@ -1,7 +1,9 @@
-\documentclass[man,apacite]{apa6}
+\documentclass[man,biblatex]{apa6}
 \usepackage{epsfig,amsmath,alltt,bm,url,subcaption}
 %% This keeps the tildes out when you use Rnw2pdf:
 \usepackage[english]{babel}
+
+\addbibresource{refs.bib}
 
 \title{A paper}
 \twoauthors{Author 1}{Author 2}
@@ -35,9 +37,9 @@ library("knitr")
 opts_chunk$set(echo=FALSE, fig.path='figure/',fig.align='center',fig.show='hold',size='footnotesize', cache.path="cache/", warning=FALSE, message = FALSE)
 @
 
-Intro text. References can be obtained like this \cite{merzei13}. Or, just putting the year in parentheses: ``\citeA{merzei13} did some research.''
+Intro text. References can be obtained like this \autocite{merzei13}. Or, just putting the year in parentheses: ``\textcite{merzei13} did some research.''
 
-Here is another reference I added \cite{tregel80}.
+Here is another reference I added \autocite{tregel80}.
 
 \section{Section header}
 
@@ -87,13 +89,13 @@ In this paper, we showed some things\ldots
 
 \section*{Computational Details}
 
-All results were obtained using the \proglang{R}~system for statistical computing \cite{r16},
+All results were obtained using the \proglang{R}~system for statistical computing \autocite{r16},
 version~\Sexpr{paste(R.Version()[6:7], collapse = ".")}.
 \proglang{R}~is
 freely available under the General Public License~2 from the
 Comprehensive \proglang{R} Archive Network at \url{http://CRAN.R-project.org/}..
 
 
-\bibliography{refs}
+\printbibliography
 
 \end{document}
